@@ -32,8 +32,6 @@ let aVertices = [];
 // });
 
 document.body.onload = _ => {
-    console.info("started!");
-
     canvas = document.querySelector('#canvas');
     gl = canvas.getContext('webgl');
 
@@ -106,7 +104,6 @@ let draw = (mode, nStart = 0, nEnd = 0, aVertices) => {
 
     // Clear framebuffer and render primitives
     gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.lineWidth(50.0);
     gl.drawArrays(mode, nStart, nEnd);
 
 }
