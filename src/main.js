@@ -1,36 +1,6 @@
 let canvas, gl;
 let aVertices = [];
 
-// let kontur_vertices = new Float32Array([
-//     290, 20, 241, 30, 195, 48, 154, 77, 127, 119, 111, 166, 120, 211, 103, 257, 84, 302, 67, 349, 63, 397, 85, 443, 106, 488, 127, 533, 172, 543, 222, 538, 271, 530, 321, 531, 371, 538, 421, 543, 467, 536, 487, 490, 507, 444, 527, 398, 522, 349, 506, 302, 489, 255, 470, 216, 480, 170, 470, 121, 441, 81, 401, 51, 355, 32, 307, 20
-// ]);
-
-// let vertices1 = kontur_vertices.map(x => {
-//     // x=x*2;
-//     if (kontur_vertices.indexOf(x) % 2) {
-//         // console.log(x);
-//         x = x * -1;
-//     } else {
-//         x = x - 300;
-//     }
-//     return x;
-// });
-
-// let visor_vertices = new Float32Array([
-//     130, 210, 146, 256, 190, 263, 231, 235, 272, 208, 320, 208, 363, 232, 405, 261, 447, 258, 466, 213, 422, 205, 372, 202, 322, 200, 272, 201, 222, 202, 172, 203
-// ]);
-
-// let vertices2 = visor_vertices.map(x => {
-//     // x=x*2;
-//     if (visor_vertices.indexOf(x) % 2) {
-//         // console.log(x);
-//         x = x * -1;
-//     } else {
-//         x = x - 300;
-//     }
-//     return x;
-// });
-
 document.body.onload = _ => {
     canvas = document.querySelector('#canvas');
     gl = canvas.getContext('webgl');
@@ -40,7 +10,7 @@ document.body.onload = _ => {
 
     let verticies = createVertices(16);
 
-    draw(gl.LINE_STRIP, 0, verticies.length, verticies);
+    draw(gl.LINE_STRIP, 0, 48, verticies);
 };
 
 let createVertices = (nCount=8) => {
