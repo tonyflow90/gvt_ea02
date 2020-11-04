@@ -10,7 +10,7 @@ document.body.onload = _ => {
 
     let verticies = createVertices(16);
 
-    draw(gl.LINE_STRIP, 0, 48, verticies);
+    draw(gl.LINE_LOOP, 0, 48, verticies);
 };
 
 let createVertices = (nCount=8) => {
